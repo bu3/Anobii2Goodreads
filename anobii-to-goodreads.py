@@ -81,7 +81,9 @@ target.append(["Title","Author","Additional Authors","ISBN","ISBN13","My Rating"
 # loading all in memory is not efficient, there's certainly a better way
 for l in reader:
 	isbn = l[0].replace("'","")
-	title = l[1] + ":" + l[2]
+	title = l[1] 
+	if l[2] != "" :
+		title = title + ":" + l[2]
 	author = l[3]
 	format = l[4]
 	pages = l[5]
